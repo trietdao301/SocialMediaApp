@@ -10,11 +10,12 @@ const LoginScreen = () => {
     const isAuthorized = useSelector((state) => state.auth.isAuthorized)
     const submitForm = (data) => {
         dispatch(login(data));
-        navigate('/');
         console.log(localStorage.getItem("token"))
     }
     useEffect(() => {
-        // This useEffect will run whenever isAuthorized changes
+        if (isAuthorized) {
+            navigate('/');
+        }
         console.log(isAuthorized);
     }, [isAuthorized]);
     return (

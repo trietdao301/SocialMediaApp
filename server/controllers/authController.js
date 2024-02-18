@@ -32,7 +32,7 @@ exports.loginControl = asyncHandler(async (req, res) => {
 const getAccessToken = payload => {
 
     return jwt.sign(payload, process.env.JWT_SECRET, {
-        expiresIn: "1d"
+        expiresIn: 30
     });
 }
 // module.exports = { getLoggedInUser };
