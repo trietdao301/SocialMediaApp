@@ -1,0 +1,149 @@
+.create-post-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    margin-left: 350px;
+    margin-right: 100px;
+    padding-bottom: 60px;
+}
+
+.create-post-header{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 35px;
+    align-items: center;
+}
+
+/*----------------------------------------START caption --------------------------------*/
+.create-post-caption {
+    display: flex;
+    flex-direction: column;
+}
+  
+.create-post-caption {
+    color: white;
+    margin-bottom: 30px; /* Adjust the margin as needed */
+}
+
+.caption-input {
+    height: 150px;
+    width: 100%;
+    background-color: #0c0c0d;
+    border: none;
+    color: #919191;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    resize: none;
+}
+
+.caption-input:focus{
+    outline: 1px solid rgb(63, 63, 63); 
+}
+
+/*----------------------------------------END caption --------------------------------*/
+
+/*----------------------------------------START add photo --------------------------------*/
+.create-post-add-photos{
+    margin-bottom: 35px;
+}
+
+.drag-photo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0c0c0d;
+    border-radius: 10px;
+    height: 500px;
+    gap: 20px;
+}
+
+.upload-photo-button{
+    background-color: #282828;
+    border: none;
+    color: white;
+    height: 50px;
+    
+}
+
+.upload-photo-button:active{
+    border: 2px solid rgb(106, 106, 106);
+}
+/*----------------------------------------END add photo -----------------------------------*/
+
+/*----------------------------------------START add location ------------------------------*/
+.create-post-add-location{
+    margin-bottom: 35px;
+}
+
+.add-location-input{
+    height: 40px;
+    width: 100%;
+    background-color: #0c0c0d;
+    border: none;
+    color: #919191;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    resize: none;
+}
+.add-location-input:focus{
+    outline: 1px solid rgb(63, 63, 63); 
+}
+/*----------------------------------------END add location ------------------------------*/
+
+/*----------------------------------------START add tag ------------------------------*/
+.create-post-add-tag{
+    margin-bottom: 30px;
+}
+.add-tag-input{
+    height: 40px;
+    width: 100%;
+    background-color: #0c0c0d;
+    border: none;
+    color: #919191;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    resize: none;
+}
+.add-tag-input:focus{
+    outline: 1px solid rgb(63, 63, 63); 
+}
+/*----------------------------------------END add tag ------------------------------*/
+
+/*----------------------------------------START end buttons -------------------------*/
+.create-post-buttons{
+    display: flex;
+    justify-content: right;
+    gap: 15px;
+    align-items: center;
+}
+
+.cancel-button{
+    background-color:  #1d1d1d;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 70px;
+    border-radius: 5px;
+}
+
+.cancel-button:active{
+    border: 1px solid rgb(106, 106, 106);
+}
+.create-post-button{
+    background-color:  #5f27ae;
+    color: white;
+    border: none;
+    height: 30px;
+    width: 90px;
+    border-radius: 5px;
+}
+
+.create-post-button:active{
+    border: 1px solid rgb(255, 255, 255);
+}
+/*----------------------------------------END end buttons -------------------------*/

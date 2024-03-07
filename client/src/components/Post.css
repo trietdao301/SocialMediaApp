@@ -1,0 +1,59 @@
+.post-container{
+    display: flex;
+    flex-direction: column;
+    background-color:#09090A;
+    border: 0.5px solid #101012;
+    min-height: 500px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 30px;
+    padding-bottom: 10px;
+}
+
+/* --------------------------------------START post-header -------------------------------------*/
+.post-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+}
+
+.post-user{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.post-edit-icon{
+    transform: scale(0.5);
+}
+/* --------------------------------------END post-header -------------------------------------*/
+
+/*---------------------------------------START post-middle -----------------------------------*/
+.post-middle{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.image{
+    border-radius: 10px;
+}
+
+/*---------------------------------------END post-middle -----------------------------------*/
+
+/*---------------------------------------START post-bottom -----------------------------------*/
+.post-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.post-like{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}

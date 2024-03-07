@@ -4,31 +4,27 @@ import { jwtDecode } from 'jwt-decode';
 import { useNavigate } from 'react-router-dom'
 const backendApiUrl = REACT_APP_SERVER_URL;
 
-console.log(backendApiUrl)
-
-let isTokenExpired = true;
-try {
-    const token = localStorage.getItem("token");
-    isTokenExpired = jwtDecode(token).exp * 1000 < Date.now()
-    console.log(isTokenExpired + " token ")
-    console.log(jwtDecode(token).exp * 1000)
-    console.log(Date.now())
-    console.log(token)
-}
-catch (error) {
-
-}
-
 const initialState = {
     loading: false,
     userInfo: {
         username: null,
         email: null
-    }, // for user object
-    userToken: null, // for storing the JWT
+    },
+    userToken: null,
     error: null,
-    success: false, // for monitoring the registration process.
-    isAuthorized: !isTokenExpired
+    success: false,
+    isAuthorized: true
+}
+
+function isValidKey() {
+    try {
+        let key = localStorage.getItem("token")
+        let isGoodKey = jwtDecode(key).exp * 1000 > Date.now()
+        return isGoodKey
+    }
+    catch {
+        return false
+    }
 }
 
 export const login = createAsyncThunk('auth/login', async (credentials, thunkAPI) => {
@@ -67,6 +63,7 @@ export const authSlice = createSlice({
                     email: action.payload.email
                 };
                 localStorage.setItem("token", action.payload.token);
+                localStorage.setItem("username", action.payload.username);
             })
             .addCase(login.rejected, (state, action) => {
                 console.log("login reject")

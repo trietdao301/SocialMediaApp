@@ -1,0 +1,17 @@
+.home-middle{
+    border-right: 0.5px solid rgb(24, 24, 24);
+    width: 800px;
+    margin-left: 250px;
+    color: white;
+}
+.home-feed{
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 70px;
+    padding-top: 40px;
+    margin-bottom: 40px;
+}
+.home-post-block{
+    margin-left: 150px;
+    margin-right: 150px;
+}
